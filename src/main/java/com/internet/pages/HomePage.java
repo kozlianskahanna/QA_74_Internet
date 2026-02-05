@@ -1,5 +1,8 @@
 package com.internet.pages;
 
+import com.internet.pages.DragAndDrop.DragAndDropPage;
+import com.internet.pages.HorizontalSlider.HorizontalSliderPage;
+import com.internet.pages.HoversPage.HoversPage;
 import com.internet.pages.NestedFrames.NestedFramesPage;
 import com.internet.core.BasePage;
 import com.internet.pages.JavaScriptAlerts.JavaScriptAlertsPage;
@@ -45,5 +48,29 @@ public class HomePage extends BasePage {
     public DropdownPage getDropdownPage() {
         clickWithJS(dropdownLink, 0, 300);
         return new DropdownPage(driver);
+    }
+
+    @FindBy(xpath = "//a[text()='Drag and Drop']")
+    WebElement dragAndDropLink;
+
+    public DragAndDropPage getDragAndDropPage() {
+        clickWithJS(dragAndDropLink, 0, 300);
+        return new DragAndDropPage(driver);
+    }
+
+    @FindBy(xpath = "//a[text()='Horizontal Slider']")
+    WebElement horizontalSliderLink;
+
+    public HorizontalSliderPage getHorizontalSliderPage() {
+        clickWithJS(horizontalSliderLink, 0, 300);
+        return new HorizontalSliderPage(driver);
+    }
+
+    @FindBy(xpath = "//a[text()='Hovers']")
+    WebElement hoversLink;
+
+    public HoversPage getHoversPage() {
+        clickWithJS(hoversLink, 0, 300);
+        return new HoversPage(driver);
     }
 }

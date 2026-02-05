@@ -58,13 +58,13 @@ public abstract class BasePage {
                 .until(ExpectedConditions.alertIsPresent());
         if (alert == null) {
             return false;
-        }else {
+        } else {
             driver.switchTo().alert().accept();
             return true;
         }
     }
 
-    public  WebDriverWait getWait(int time) {
+    public WebDriverWait getWait(int time) {
         //getWait(5).until(ExpectedConditions.elementToBeClickable(element));
         return new WebDriverWait(driver, Duration.ofSeconds(time));
     }
@@ -80,6 +80,7 @@ public abstract class BasePage {
     public boolean isContainsCssValue(String color, WebElement selectedCar, String value) {
         return selectedCar.getCssValue(value).contains(color);
     }
+
     public boolean isElementVisible(WebElement element) {
         try {
             element.isDisplayed();
@@ -90,7 +91,7 @@ public abstract class BasePage {
         }
     }
 
-    public void waitOfElementVisibility(WebElement element,int time) {
+    public void waitOfElementVisibility(WebElement element, int time) {
         getWait(time).until(ExpectedConditions.visibilityOf(element));
     }
 
@@ -102,7 +103,7 @@ public abstract class BasePage {
         }
     }
 
-    public  String getValue(WebElement element, String value) {
+    public String getValue(WebElement element, String value) {
         return element.getDomAttribute(value);
     }
 }
