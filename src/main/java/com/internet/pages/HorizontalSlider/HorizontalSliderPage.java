@@ -19,13 +19,19 @@ public class HorizontalSliderPage extends BasePage {
     @FindBy(id = "range")
     WebElement sliderValue;
 
-    public HorizontalSliderPage moveSliderWithKeys(int steps) {
+   /* public HorizontalSliderPage moveSliderWithKeys(int steps) {
         waitOfElementVisibility(slider, 10);
         click(slider);
 
         for (int i = 0; i < steps; i++) {
             slider.sendKeys(Keys.ARROW_RIGHT);
-        }
+            }
+        return this;
+    }*/
+
+    public HorizontalSliderPage moveSlider(int xOffset) {
+        waitOfElementVisibility(slider, 10);
+        actions.dragAndDropBy(slider, xOffset, 0).perform();
         return this;
     }
 
@@ -33,4 +39,5 @@ public class HorizontalSliderPage extends BasePage {
         Assertions.assertEquals(expectedValue, sliderValue.getText());
         return this;
     }
+
 }

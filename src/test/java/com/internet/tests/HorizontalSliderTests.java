@@ -17,7 +17,8 @@ public class HorizontalSliderTests extends TestBase {
 
     @Test
     public void moveSliderTest() {
-        sliderPage.moveSliderWithKeys(10)
+        sliderPage.moveSlider(80)
                 .verifySliderValue("5");
     }
+
 }

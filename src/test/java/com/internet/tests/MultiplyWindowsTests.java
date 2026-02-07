@@ -13,7 +13,7 @@ public class MultiplyWindowsTests extends TestBase {
     @BeforeEach
     public void preconditions() {
         driver.get("https://the-internet.herokuapp.com/");
-        multiplyWindowsPage = new HomePage(driver).getMultipleWindowsPage();
+        multiplyWindowsPage = new HomePage(driver).getMultiplyWindowsPage();
     }
 
     @Test

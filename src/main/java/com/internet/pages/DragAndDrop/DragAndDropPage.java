@@ -24,17 +24,18 @@ public class DragAndDropPage extends BasePage {
         return this;
     }
 
-    public DragAndDropPage verifyElementText(WebElement element, String expectedText) {
+    /* public DragAndDropPage verifyElementText(WebElement element, String expectedText) {
         Assertions.assertTrue(shouldHaveText(element, expectedText, 5));
+        return this;
+    }*/
+
+    public DragAndDropPage verifyColumnAText(String expectedText) {
+        Assertions.assertTrue(shouldHaveText(columnA, expectedText, 5));
         return this;
     }
 
-
-    public WebElement getColumnA() {
-        return columnA;
-    }
-
-    public WebElement getColumnB() {
-        return columnB;
+    public DragAndDropPage verifyColumnBText(String expectedText) {
+        Assertions.assertTrue(shouldHaveText(columnB, expectedText, 5));
+        return this;
     }
 }

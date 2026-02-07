@@ -18,13 +18,15 @@ public class HoversTests extends TestBase {
     @Test
     public void hoverUserTest() {
         hoversPage.hoverOnUser(0)
-                .verifyUserName(0, "name: user1");
+                .verifyUserNameSoftly(0, "name: user1");
+        hoversPage.assertAll();
     }
 
     @Test
     public void hoverAllUsersTest() {
-        hoversPage.hoverOnUser(0).verifyUserName(0, "name: user1");
-        hoversPage.hoverOnUser(1).verifyUserName(1, "name: user2");
-        hoversPage.hoverOnUser(2).verifyUserName(2, "name: user3");
+        hoversPage.hoverOnUser(0).verifyUserNameSoftly(0, "name: user1");
+        hoversPage.hoverOnUser(1).verifyUserNameSoftly(1, "name: user2");
+        hoversPage.hoverOnUser(2).verifyUserNameSoftly(2, "name: user3");
+        hoversPage.assertAll();
     }
 }

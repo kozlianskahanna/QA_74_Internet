@@ -12,19 +12,19 @@ import java.time.Duration;
 public abstract class BasePage {
 
     protected WebDriver driver;
-    public static JavascriptExecutor js;
-    public static SoftAssertions softly;
-    public static Actions actions;
+    // public static JavascriptExecutor js;
+    public SoftAssertions softly;//static
+    public  Actions actions;//static
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
-        js = (JavascriptExecutor) driver;
+        //js = (JavascriptExecutor) driver;
         softly = new SoftAssertions();
         actions = new Actions(driver);
     }
 
-    public void scrollWithJS(int x, int y, int millis) {
+    /*public void scrollWithJS(int x, int y, int millis) {
         pause(millis);
         js.executeScript("window.scrollBy(" + x + "," + y + ")");
     }
@@ -37,7 +37,7 @@ public abstract class BasePage {
     public void typeWithJS(WebElement element, String text, int x, int y) {
         scrollWithJS(x, y, 1000);
         type(element, text);
-    }
+    }*/
 
 
     public void click(WebElement element) {

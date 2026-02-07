@@ -22,15 +22,15 @@ public class HomePage extends BasePage {
     WebElement jsAlertsLink;
 
     public JavaScriptAlertsPage getJavaScriptAlerts() {
-        clickWithJS(jsAlertsLink, 0, 300);
+        click(jsAlertsLink);
         return new JavaScriptAlertsPage(driver);
     }
 
     @FindBy(xpath = "//a[text()='Multiple Windows']")
     WebElement multipleWindowsLink;
 
-    public MultiplyWindowsPage getMultipleWindowsPage() {
-        clickWithJS(multipleWindowsLink, 0, 300);
+    public MultiplyWindowsPage getMultiplyWindowsPage() {
+        click(multipleWindowsLink);
         return new MultiplyWindowsPage(driver);
     }
 
@@ -38,7 +38,7 @@ public class HomePage extends BasePage {
     WebElement nestedFramesLink;
 
     public NestedFramesPage getNestedFramesPage() {
-        clickWithJS(nestedFramesLink, 0, 300);
+        click(nestedFramesLink);
         return new NestedFramesPage(driver);
     }
 
@@ -46,7 +46,7 @@ public class HomePage extends BasePage {
     WebElement dropdownLink;
 
     public DropdownPage getDropdownPage() {
-        clickWithJS(dropdownLink, 0, 300);
+        click(dropdownLink);
         return new DropdownPage(driver);
     }
 
@@ -54,7 +54,7 @@ public class HomePage extends BasePage {
     WebElement dragAndDropLink;
 
     public DragAndDropPage getDragAndDropPage() {
-        clickWithJS(dragAndDropLink, 0, 300);
+        click(dragAndDropLink);
         return new DragAndDropPage(driver);
     }
 
@@ -62,7 +62,7 @@ public class HomePage extends BasePage {
     WebElement horizontalSliderLink;
 
     public HorizontalSliderPage getHorizontalSliderPage() {
-        clickWithJS(horizontalSliderLink, 0, 300);
+        click(horizontalSliderLink);
         return new HorizontalSliderPage(driver);
     }
 
@@ -70,7 +70,7 @@ public class HomePage extends BasePage {
     WebElement hoversLink;
 
     public HoversPage getHoversPage() {
-        clickWithJS(hoversLink, 0, 300);
+        click(hoversLink);
         return new HoversPage(driver);
     }
 }

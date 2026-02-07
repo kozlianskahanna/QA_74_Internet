@@ -25,8 +25,22 @@ public class HoversPage extends BasePage {
         return this;
     }
 
+    /*
     public HoversPage verifyUserName(int index, String expectedName) {
         Assertions.assertTrue(shouldHaveText(userNames.get(index), expectedName, 5));
         return this;
+    }
+    */
+
+    public HoversPage verifyUserNameSoftly(int index, String expectedName) {
+        softly.assertThat(userNames.get(index).getText())
+                .as("Проверка имени пользователя  " + index)
+                .contains(expectedName);
+        return this;
+    }
+
+
+    public void assertAll() {
+        softly.assertAll();
     }
 }
