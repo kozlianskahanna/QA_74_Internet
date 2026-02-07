@@ -19,7 +19,6 @@ public class DragAndDropTests extends TestBase {
     public void dragAndDropTest() {
 
         dragAndDropPage.actionDragAndDrop()
-                //.verifyElementText(dragAndDropPage.getColumnA(), "B")
                 .verifyColumnAText("B")
                 .verifyColumnBText("A");
     }

@@ -12,33 +12,15 @@ import java.time.Duration;
 public abstract class BasePage {
 
     protected WebDriver driver;
-    // public static JavascriptExecutor js;
-    public SoftAssertions softly;//static
-    public  Actions actions;//static
+    public SoftAssertions softly;
+    public Actions actions;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
-        //js = (JavascriptExecutor) driver;
         softly = new SoftAssertions();
         actions = new Actions(driver);
     }
-
-    /*public void scrollWithJS(int x, int y, int millis) {
-        pause(millis);
-        js.executeScript("window.scrollBy(" + x + "," + y + ")");
-    }
-
-    public void clickWithJS(WebElement element, int x, int y) {
-        scrollWithJS(x, y, 1000);
-        click(element);
-    }
-
-    public void typeWithJS(WebElement element, String text, int x, int y) {
-        scrollWithJS(x, y, 1000);
-        type(element, text);
-    }*/
-
 
     public void click(WebElement element) {
         getWait(5).until(ExpectedConditions.elementToBeClickable(element));
@@ -65,7 +47,6 @@ public abstract class BasePage {
     }
 
     public WebDriverWait getWait(int time) {
-        //getWait(5).until(ExpectedConditions.elementToBeClickable(element));
         return new WebDriverWait(driver, Duration.ofSeconds(time));
     }
 
