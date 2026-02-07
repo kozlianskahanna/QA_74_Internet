@@ -1,5 +1,6 @@
 package com.internet.pages;
 
+import com.internet.pages.ContextMenu.ContextMenuPage;
 import com.internet.pages.DragAndDrop.DragAndDropPage;
 import com.internet.pages.HorizontalSlider.HorizontalSliderPage;
 import com.internet.pages.HoversPage.HoversPage;
@@ -73,4 +74,20 @@ public class HomePage extends BasePage {
         click(hoversLink);
         return new HoversPage(driver);
     }
+
+    @FindBy(xpath = "//a[text()='Context Menu']")
+    WebElement contextMenuLink;
+
+    public ContextMenuPage getContextMenu() {
+        click(contextMenuLink);
+        return new ContextMenuPage(driver);
+    }
+
+    @FindBy(tagName = "h1")
+    WebElement header;
+
+    public boolean isHomePageHeaderDisplayed() {
+        return header.getText().equals("Welcome to the-internet");
+    }
+
 }
