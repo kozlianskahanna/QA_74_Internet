@@ -27,7 +27,9 @@ public class ContextMenuPage extends BasePage {
     }
 
     public HomePage clickBackUsingKeys() {
-        driver.navigate().back();
+        actions.sendKeys(Keys.ARROW_DOWN)
+                .sendKeys(Keys.ENTER)
+                .perform();
         return new HomePage(driver);
     }
 

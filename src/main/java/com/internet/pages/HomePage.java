@@ -82,12 +82,4 @@ public class HomePage extends BasePage {
         click(contextMenuLink);
         return new ContextMenuPage(driver);
     }
-
-    @FindBy(tagName = "h1")
-    WebElement header;
-
-    public boolean isHomePageHeaderDisplayed() {
-        return header.getText().equals("Welcome to the-internet");
-    }
-
 }
