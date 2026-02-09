@@ -2,7 +2,6 @@ package com.internet.pages.ContextMenu;
 
 import com.internet.core.BasePage;
 import com.internet.pages.HomePage;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,11 +25,9 @@ public class ContextMenuPage extends BasePage {
         return this;
     }
 
-    public HomePage clickBackUsingKeys() {
-        actions.sendKeys(Keys.ARROW_DOWN)
-                .sendKeys(Keys.ENTER)
-                .perform();
+    // 👉❗️Тот самый магический метод "Назад", про который говорила учительница
+    public HomePage clickBack() {
+        driver.navigate().back();
         return new HomePage(driver);
     }
-
 }
