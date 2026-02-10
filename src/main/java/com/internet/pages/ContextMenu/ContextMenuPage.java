@@ -25,7 +25,6 @@ public class ContextMenuPage extends BasePage {
         return this;
     }
 
-    // 👉❗️Тот самый магический метод "Назад", про который говорила учительница
     public HomePage clickBack() {
         driver.navigate().back();
         return new HomePage(driver);

@@ -24,11 +24,6 @@ public class DragAndDropPage extends BasePage {
         return this;
     }
 
-    /* public DragAndDropPage verifyElementText(WebElement element, String expectedText) {
-        Assertions.assertTrue(shouldHaveText(element, expectedText, 5));
-        return this;
-    }*/
-
     public DragAndDropPage verifyColumnAText(String expectedText) {
         Assertions.assertTrue(shouldHaveText(columnA, expectedText, 5));
         return this;

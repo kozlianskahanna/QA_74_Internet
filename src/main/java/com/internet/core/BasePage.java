@@ -7,19 +7,40 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.time.Duration;
 
 public abstract class BasePage {
 
     protected WebDriver driver;
-    public SoftAssertions softly;
+    public static SoftAssertions softly;
+    public static JavascriptExecutor js;
     public Actions actions;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
+        js = (JavascriptExecutor) driver;
         softly = new SoftAssertions();
         actions = new Actions(driver);
+    }
+
+    public void verifyLinks(String url) {
+        try {
+            URL linkUrl = new URL(url);
+            HttpURLConnection connection = (HttpURLConnection) linkUrl.openConnection();
+            connection.setConnectTimeout(5000);
+            connection.connect();
+            int statusCode = connection.getResponseCode();
+            if (statusCode >= 400) {
+                softly.fail(url + " --> " + connection.getResponseMessage() + " is a BROKEN link");
+            } else {
+                softly.assertThat(statusCode).isLessThan(400);
+            }
+        } catch (Exception e) {
+            softly.fail(url + " --> ERROR occurred");
+        }
     }
 
     public void click(WebElement element) {
@@ -35,17 +56,6 @@ public abstract class BasePage {
         }
     }
 
-    public boolean isAlertPresent(int time) {
-        Alert alert = getWait(time)
-                .until(ExpectedConditions.alertIsPresent());
-        if (alert == null) {
-            return false;
-        } else {
-            driver.switchTo().alert().accept();
-            return true;
-        }
-    }
-
     public WebDriverWait getWait(int time) {
         return new WebDriverWait(driver, Duration.ofSeconds(time));
     }
@@ -54,26 +64,19 @@ public abstract class BasePage {
         return element.getText().contains(text);
     }
 
+    public void waitOfElementVisibility(WebElement element, int time) {
+        getWait(time).until(ExpectedConditions.visibilityOf(element));
+    }
+
     public boolean shouldHaveText(WebElement element, String text, int time) {
         return getWait(time).until(ExpectedConditions.textToBePresentInElement(element, text));
     }
 
-    public boolean isContainsCssValue(String color, WebElement selectedCar, String value) {
-        return selectedCar.getCssValue(value).contains(color);
-    }
-
-    public boolean isElementVisible(WebElement element) {
-        try {
-            element.isDisplayed();
-            return true;
-        } catch (NoSuchElementException e) {
-            e.getMessage();
-            return false;
-        }
-    }
-
-    public void waitOfElementVisibility(WebElement element, int time) {
-        getWait(time).until(ExpectedConditions.visibilityOf(element));
+    public boolean isAlertPresent(int time) {
+        Alert alert = getWait(time).until(ExpectedConditions.alertIsPresent());
+        if (alert == null) return false;
+        driver.switchTo().alert().accept();
+        return true;
     }
 
     public void pause(int millis) {

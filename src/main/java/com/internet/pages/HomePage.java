@@ -1,7 +1,9 @@
 package com.internet.pages;
 
+import com.internet.pages.BrokenImages.BrokenImagesPage;
 import com.internet.pages.ContextMenu.ContextMenuPage;
 import com.internet.pages.DragAndDrop.DragAndDropPage;
+import com.internet.pages.FileUploader.FileUploaderPage;
 import com.internet.pages.HorizontalSlider.HorizontalSliderPage;
 import com.internet.pages.HoversPage.HoversPage;
 import com.internet.pages.NestedFrames.NestedFramesPage;
@@ -81,5 +83,21 @@ public class HomePage extends BasePage {
     public ContextMenuPage getContextMenu() {
         click(contextMenuLink);
         return new ContextMenuPage(driver);
+    }
+
+    @FindBy(xpath = "//a[text()='File Upload']")
+    WebElement fileUploadLink;
+
+    public FileUploaderPage getFileUploaderPage() {
+        click(fileUploadLink);
+        return new FileUploaderPage(driver);
+    }
+
+    @FindBy(xpath = "//a[text()='Broken Images']")
+    WebElement brokenImagesLink;
+
+    public BrokenImagesPage getBrokenImagesPage() {
+        click(brokenImagesLink);
+        return new BrokenImagesPage(driver);
     }
 }

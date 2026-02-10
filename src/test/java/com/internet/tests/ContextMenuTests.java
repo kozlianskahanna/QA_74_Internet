@@ -20,7 +20,7 @@ public class ContextMenuTests extends TestBase {
         contextMenuPage
                 .rightClickOnHotSpot()
                 .acceptAlert()
-                .clickBack(); // Теперь сработает как надо!
+                .clickBack();
     }
 
 }
