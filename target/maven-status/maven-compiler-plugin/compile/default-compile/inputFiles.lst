@@ -1,0 +1,15 @@
+/Users/hannakozlianska/QA/QA_74_Internet/src/main/java/com/internet/core/ApplicationManager.java
+/Users/hannakozlianska/QA/QA_74_Internet/src/main/java/com/internet/core/BasePage.java
+/Users/hannakozlianska/QA/QA_74_Internet/src/main/java/com/internet/pages/BrokenImages/BrokenImagesPage.java
+/Users/hannakozlianska/QA/QA_74_Internet/src/main/java/com/internet/pages/ContextMenu/ContextMenuPage.java
+/Users/hannakozlianska/QA/QA_74_Internet/src/main/java/com/internet/pages/DragAndDrop/DragAndDropPage.java
+/Users/hannakozlianska/QA/QA_74_Internet/src/main/java/com/internet/pages/Dropdown/DropdownPage.java
+/Users/hannakozlianska/QA/QA_74_Internet/src/main/java/com/internet/pages/FileUploader/FileUploaderPage.java
+/Users/hannakozlianska/QA/QA_74_Internet/src/main/java/com/internet/pages/HomePage.java
+/Users/hannakozlianska/QA/QA_74_Internet/src/main/java/com/internet/pages/HorizontalSlider/HorizontalSliderPage.java
+/Users/hannakozlianska/QA/QA_74_Internet/src/main/java/com/internet/pages/HoversPage/HoversPage.java
+/Users/hannakozlianska/QA/QA_74_Internet/src/main/java/com/internet/pages/JavaScriptAlerts/JavaScriptAlertsPage.java
+/Users/hannakozlianska/QA/QA_74_Internet/src/main/java/com/internet/pages/MultiplyWindows/MultiplyWindowsPage.java
+/Users/hannakozlianska/QA/QA_74_Internet/src/main/java/com/internet/pages/NestedFrames/NestedFramesPage.java
+/Users/hannakozlianska/QA/QA_74_Internet/src/main/java/com/internet/utils/MyListener.java
+/Users/hannakozlianska/QA/QA_74_Internet/src/main/java/com/internet/utils/MyTestWatcher.java

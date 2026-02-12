@@ -1,6 +1,7 @@
 package com.internet.pages.HoversPage;
 
 import com.internet.core.BasePage;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,13 +26,8 @@ public class HoversPage extends BasePage {
     }
 
     public HoversPage verifyUserNameSoftly(int index, String expectedName) {
-        softly.assertThat(userNames.get(index).getText())
-                .as("Проверка имени пользователя  " + index)
-                .contains(expectedName);
+        Assertions.assertTrue(userNames.get(index).getText().contains(expectedName));
         return this;
     }
 
-    public void assertAll() {
-        softly.assertAll();
-    }
 }

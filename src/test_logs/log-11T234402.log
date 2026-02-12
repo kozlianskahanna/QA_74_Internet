@@ -1,4 +1,0 @@
-88   [main] ERROR com.internet.utils.MyTestWatcher -- The method !!!Optional[public void com.internet.tests.JavaScriptAlertsTests.jsAlertTest()]!!! is FAILED
-89   [main] INFO  com.internet.utils.MyTestWatcher -- jsAlertTest()
-89   [main] ERROR com.internet.utils.MyTestWatcher -- WebDriver must be set
-89   [main] INFO  com.internet.utils.MyTestWatcher -- **************************************************

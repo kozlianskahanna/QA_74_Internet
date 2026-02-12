@@ -12,7 +12,7 @@ public class TestBase {
     protected WebDriver driver;
 
     protected ApplicationManager app = new ApplicationManager
-            (System.getProperty("browser","chrom"));
+            (System.getProperty("browser","chrome"));
 
 
     @BeforeEach

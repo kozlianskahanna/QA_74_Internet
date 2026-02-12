@@ -1,5 +1,3 @@
-target/
-
 ### IntelliJ IDEA ###
 *.idea
 *.iws
@@ -7,4 +5,7 @@ target/
 *.ipr
 
 ### Mac OS ###
-.DS_S       atore
+.DS_Store
+
+*.log
+*.png

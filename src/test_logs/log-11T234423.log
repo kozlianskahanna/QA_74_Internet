@@ -1,4 +1,0 @@
-116  [main] ERROR com.internet.utils.MyTestWatcher -- The method !!!Optional[public void com.internet.tests.JavaScriptAlertsTests.jsPromptTest()]!!! is FAILED
-117  [main] INFO  com.internet.utils.MyTestWatcher -- jsPromptTest()
-117  [main] ERROR com.internet.utils.MyTestWatcher -- WebDriver must be set
-117  [main] INFO  com.internet.utils.MyTestWatcher -- **************************************************

@@ -4,6 +4,7 @@ import com.internet.core.TestBase;
 import com.internet.pages.HomePage;
 import com.internet.pages.DragAndDrop.DragAndDropPage;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 public class DragAndDropTests extends TestBase {
@@ -16,6 +17,7 @@ public class DragAndDropTests extends TestBase {
     }
 
     @Test
+    @Tag("smoky")
     public void dragAndDropTest() {
 
         dragAndDropPage.actionDragAndDrop()

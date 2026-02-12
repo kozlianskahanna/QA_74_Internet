@@ -1,0 +1,15 @@
+com/internet/core/BasePage.class
+com/internet/pages/MultiplyWindows/MultiplyWindowsPage.class
+com/internet/pages/Dropdown/DropdownPage.class
+com/internet/pages/FileUploader/FileUploaderPage.class
+com/internet/pages/JavaScriptAlerts/JavaScriptAlertsPage.class
+com/internet/pages/HomePage.class
+com/internet/core/ApplicationManager.class
+com/internet/utils/MyListener.class
+com/internet/pages/HorizontalSlider/HorizontalSliderPage.class
+com/internet/pages/NestedFrames/NestedFramesPage.class
+com/internet/pages/HoversPage/HoversPage.class
+com/internet/utils/MyTestWatcher.class
+com/internet/pages/BrokenImages/BrokenImagesPage.class
+com/internet/pages/ContextMenu/ContextMenuPage.class
+com/internet/pages/DragAndDrop/DragAndDropPage.class

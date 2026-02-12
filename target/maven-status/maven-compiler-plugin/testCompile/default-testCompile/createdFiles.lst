@@ -1,0 +1,11 @@
+com/internet/core/TestBase.class
+com/internet/tests/BrokenImagesTests.class
+com/internet/tests/DragAndDropTests.class
+com/internet/tests/JavaScriptAlertsTests.class
+com/internet/tests/DropdownTests.class
+com/internet/tests/HorizontalSliderTests.class
+com/internet/tests/NestedFramesTests.class
+com/internet/tests/HoversTests.class
+com/internet/tests/ContextMenuTests.class
+com/internet/tests/FileUploaderTests.class
+com/internet/tests/MultiplyWindowsTests.class
